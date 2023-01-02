@@ -8,18 +8,22 @@
     <script>
         function check(){
             a=parseInt(document.getElementById("var").value);
-            count=0;
-            for(i=2;i<a/2;i++){
-                if(a%i==0)
-                count=1;
-                break;
+            if(a%2==0||a%2==1){
+                count=0;
+                for(i=2;i<a/2;i++){
+                    if(a%i==0)
+                    count=1;
+                    break;
+                }
+                if(count==0){
+                    document.getElementById("res").innerHTML="Prime";
+                }
+                else
+                document.getElementById("res").innerHTML="Not a Prime";
             }
-            if(count==0){
-                document.getElementById("res").innerHTML="Prime";
+            else{
+                document.getElementById("res").innerHTML="Enter a valid number";
             }
-            else
-            document.getElementById("res").innerHTML="Not a Prime";
-
         }
     </script>
 </head>
