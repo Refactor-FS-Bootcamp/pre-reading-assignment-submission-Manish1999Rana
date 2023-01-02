@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Assignment</title>
+    <style>
+        .a{
+            margin: 4%;
+            background-color:yellow;
+            color: red;
+            font-size: 5vw;
+        }
+        .ima{
+            width: 100%;
+            height: auto;
+        }
+        #gh{
+            color: blue;
+            font-size: 3vw;
+        }
+        body{
+            
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body> 
-    <picture>
-        <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
-        <source media="(min-width:465px)" srcset="img_white_flower.jpg">
-        <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
-        Resize window to view different image.
-    </picture> 
+    <h1 class="a">Landscape Image</h1>
+    <img src="Flowers.jpg" alt="Images" srcset="Land.jpg 600w, colours.jpg 900w, Flowers.jpg 1280w" class="ima">
+    <div id="gh">Please resize window to see different Images.</div>
 </body>
 </html>
