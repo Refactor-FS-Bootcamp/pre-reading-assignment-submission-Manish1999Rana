@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function run(){
+        a=parseInt(document.getElementById("number").value);
+        if(a%2==0)
+        document.getElementById("result").innerHTML="Even";
+        else if(a%2==1)
+        document.getElementById("result").innerHTML="Odd";
+        else
+        document.getElementById("result").innerHTML="Enter a number";
+        }
+    </script>
+    <form action="#">
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number">
+        <input type="button" value="Check" onclick="run()">
+    </form>
+    <p id="result"></p>
+</body>
+</html>
