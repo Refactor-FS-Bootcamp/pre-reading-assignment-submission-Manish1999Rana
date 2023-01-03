@@ -14,7 +14,7 @@
             b[i]=parseInt(prompt("Enter element "+i+"of array:-"))
         }
         for(i=0;i<a;i++){
-            for(j=0;j<a-i-2;j++){
+            for(j=0;j<a-i-1;j++){
                 if(b[j]>b[j+1]){
                     b[j]=b[j]+b[j+1];
                     b[j+1]=b[j]-b[j+1];
@@ -24,6 +24,5 @@
         }
         document.write(b);
     </script>
-    
 </body>
 </html>
