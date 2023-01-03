@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function print(va){
+            s="Please enter a valid number.";
+            a=0;
+            b=1;
+            if(va.match(/^\d+$/)){
+                for(i=0;i<parseInt(va);i++){
+                    if(i==0){
+                        s="0";
+                        continue;
+                    }
+                    if(i==1){
+                        s="0 1";
+                        continue;
+                    }
+                    s=s+" "+(a+b);
+                    b=a+b;
+                    a=b-a;
+                }
+                document.getElementById("res").innerHTML=s;
+            }
+            else
+            document.getElementById("res").innerHTML=s;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <label for="variable">Enter how many fabonacy series no. you want to see:</label>
+        <input type="number" name="range" id="var">
+        <input type="button" value="Print" onclick="print(form1.var.value)">
+    </form>
+    <p id="res"></p>
+</body>
+</html>
