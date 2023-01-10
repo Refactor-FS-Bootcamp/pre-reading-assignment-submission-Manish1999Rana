@@ -27,10 +27,12 @@
         #gh{
             color: blue;
             font-size: 3vw;
+            text-align: center;
         }
         #container{
             margin: 3%;
             padding: 3%;
+            padding-top: 1%;
             background-color: antiquewhite;
             border-radius: 5vw;
             border: 1vw outset gray;
@@ -64,13 +66,13 @@
 <body> 
     <h1 class="a">Landscape Image</h1>
     <div id="container">
+        <div id="gh">Please resize window to see difference in Image & Text.</div><hr style="margin: 1vw 3vw ;">
         <img src="Flowers.jpg" alt="Images" srcset="Land.jpg 700w, colours.jpg 1000w, Flowers.jpg 1300w" class="ima">
-        <div id="gh">Please resize window to see different Images and Change in Description text</div>
     </div>
     <div id="text">There are three images which changes according to viewport size.
         Largest one is the flower garden which displayes after screen size is greater tha 1000px,
-        second one is if a abstract painting of various colours,
-        and third is of a plain land with trees and mauntain at a distance.
+        second one is if a abstract painting of various colours which is visible between 700px to 1000px,
+        and third is of a plain land with trees and mauntain at a distance which is visible id window size is less then 700px.<br>
         Also text color, text size and background colour also changes at 1000px window size.
     </div>
 </body>
