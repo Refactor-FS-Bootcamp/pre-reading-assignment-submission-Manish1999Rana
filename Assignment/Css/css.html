@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Assignment</title>
+    <style>
+        .a{
+            margin: 4%;
+            padding: 1vw;
+            background-image: radial-gradient(red 2%,blueviolet 80%);
+            color: white;
+            font-size: 5vw;
+            border: 1vw ridge black;
+            border-bottom-right-radius: 5vw;
+            border-top-left-radius: 5vw;
+            box-shadow: 1vw 1vw rgb(255, 134, 64);
+            background-clip: padding-box;
+            text-align: center;
+        }
+        .ima{
+            width: 100%;
+            height: auto;
+            border-radius: 3vw;
+        }
+        #gh{
+            color: blue;
+            font-size: 3vw;
+            text-align: center;
+        }
+        #container{
+            margin: 3%;
+            padding: 1% 3% 3% 3%;
+            background-color: antiquewhite;
+            border-radius: 5vw;
+            border: 1vw outset gray;
+        }
+        #text{ 
+            padding: 1vw;
+            font-size: 3vw;
+            background-color: rgb(212, 70, 27);
+            text-align: justify;
+            width: 100%;
+            border-radius: 2vw;
+            box-sizing: border-box;
+        }
+        #change{
+            display: flex;
+            flex-direction: column;
+            gap: 3vw;
+        }    
+        body{
+            background-color: rgb(54, 87, 177);
+        }
+        @media screen and (min-width:1000px){
+            #text{
+                margin: auto;
+                padding: 1vw;
+                font-size: 2vw;
+                background-color: rgb(252, 197, 171);
+                color: darkcyan;
+                text-align: justify;
+                width: 35%;
+                border-radius: 1vw;
+            }      
+            
+            .ima{
+                width: 63%;
+                height: auto;
+                border-radius: 3vw;
+            }  
+            #change{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body> 
+    <h1 class="a">Landscape Image</h1>
+    <div id="container">
+        <div id="gh">Please resize window to see difference in Image & Text.</div><hr style="margin: 1vw 3vw ;">
+        <div id="change">
+            <img src="Flowers.jpg" alt="Images" srcset="Land.jpg 700w, colours.jpg 1000w, Flowers.jpg 1300w" class="ima">
+            <div id="text">There are three images which changes according to viewport size.
+                Largest one is the flower garden which displayes after screen size is greater tha 1000px,
+                second one is if a abstract painting of various colours which is visible between 700px to 1000px,
+                and third is of a plain land with trees and mauntain at a distance which is visible id window size is less then 700px.<br>
+                Also text color, text size and background colour also changes at 1000px window size.
+            </div></div>
+    </div>
+</body>
+</html>

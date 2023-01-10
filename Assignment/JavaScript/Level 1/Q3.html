@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            a=parseFloat(document.getElementById("ist").value);
+            b=parseFloat(document.getElementById("iind").value);
+            c=parseFloat(document.getElementById("iiird").value);
+            if(a<b){
+                if(b<c)
+                document.getElementById("res").innerHTML=c+"is greatest";
+                else
+                document.getElementById("res").innerHTML=b+"is greatest";
+            }
+            else{
+                if(a<c)
+                document.getElementById("res").innerHTML=c+"is greatest";
+                else
+                document.getElementById("res").innerHTML=a+"is greatest";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form><label for="inputs">Enter 3 number:</label><br>
+        <input type="number" name="ist" id="ist"><br>
+        <input type="number" name="ist" id="iind"><br>
+        <input type="number" name="ist" id="iiird"><br>
+        <input type="button" value="Check Greatest" onclick="check()">
+    </form>
+    <p id="res"></p>
+</body>
+</html>

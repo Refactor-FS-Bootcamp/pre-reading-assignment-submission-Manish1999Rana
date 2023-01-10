@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Student ={};
+        Student.name="Manish";
+        Student.id=001;
+        Student.city="Ranchi";
+        function check(){
+            document.getElementById("res").innerHTML=("name exist = ")+("name" in Student)+"<br>Keys are: "+(Object.keys(Student));
+
+        }
+        function update(str){
+            Student.name=str;
+            document.getElementById("res").innerHTML="updated, print to view changes.";
+        }
+        function print(){
+            s="Name:"+Student.name+"<br>"+"ID:"+Student.id+"<br>"+"City:"+Student.city;
+            document.getElementById("res").innerHTML="Student Detail:-<br>"+s;
+
+        }
+    </script>
+    <form name="form1">
+        <label for="key">Enter new name:</label>
+        <input type="text" id="name">
+        <input type="button" value="Update" onclick="update(form1.name.value)"><br>
+        <input type="button" value="Check if name exist?" onclick="check()">
+        <input type="button" value="Print Student" onclick="print()">
+    </form>
+
+    <p id="res"></p>
+</body>
+</html>
